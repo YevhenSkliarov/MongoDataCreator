@@ -3,7 +3,7 @@ const { faker } = require('@faker-js/faker');
 class Object {
     constructor() {
         this._id = faker.random.alphaNumeric(24);
-        this.bigid = "bigid-pii_record-" + faker.random.alphaNumeric(12);
+        this.bigid = "test-pii_record-" + faker.random.alphaNumeric(12);
         this.companyName = faker.company.companyName;
         this.email = faker.internet.email;
         this.city = faker.address.city;

@@ -1,11 +1,11 @@
 const { MongoClient } = require('mongodb');
 const arr = require('../src/DataGenerator/dataGenerator')
 // Connection URL
-const url = 'mongodb://admin:secret@10.2.11.232:27017';
+const url = 'mongodb://user:password@localhost:27017';
 const client = new MongoClient(url);
 
 // Database Name
-const dbName = 'mongodb-datasource-integration2';
+const dbName = 'db-name';
 
 async function main() {
   // Use connect method to connect to the server
