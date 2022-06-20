@@ -1,7 +1,7 @@
 const connection = {
-    url:'mongodb://admin:secret@10.2.11.232:27017',
+    url:'mongodb://user:password@localhost:27017',
     collName: 'test',
-    dbName: 'mongodb-datasource-integration2'
+    dbName: 'db-name'
 }
 
 module.exports = connection;
