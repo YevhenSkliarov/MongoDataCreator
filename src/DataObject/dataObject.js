@@ -3,7 +3,7 @@ const { faker } = require('@faker-js/faker');
 class Object {
     constructor() {
         this._id = faker.random.alphaNumeric(24);
-        this.bigid = "test-pii_record-" + faker.random.alphaNumeric(12);
+        this.bigid = "data-pii_record-" + faker.random.alphaNumeric(12);
         this.companyName = faker.company.companyName;
         this.email = faker.internet.email;
         this.city = faker.address.city;
@@ -13,6 +13,7 @@ class Object {
         this.system_location = faker.address.country();
         this.risk = faker.random.numeric(1);
         this.pii_record_hash = faker.random.alphaNumeric(24);
+        this.ssn = faker.random.numeric(3)+"-"+faker.random.numeric(2)+"-"+faker.random.numeric(3)
     }
 
     createObject() {
@@ -27,7 +28,8 @@ class Object {
             "country": this.country,
             "system_location": this.system_location,
             "risk": this.risk,
-            "pii_record_hash": this.pii_record_hash
+            "pii_record_hash": this.pii_record_hash,
+            "ssn": this.ssn
         }
     }
 }
